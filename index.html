@@ -62,6 +62,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Mac下Hexo-Github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/28/Mac下Hexo-Github搭建博客/" class="article-date">
+  <time datetime="2018-08-28T11:51:43.000Z" itemprop="datePublished">2018-08-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/28/Mac下Hexo-Github搭建博客/">Mac下Hexo+Github搭建博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Mac下Hexo+GitHub搭建博客</p>
+<p>##一、 环境配置<br>1.Git<br>2.Node.js<br>     3.更新node和npm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo n stable</span><br></pre></td></tr></table></figure>
+<p>4.Github账号</p>
+<p>##二、安装Hero</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>安装成功会出现一个非常长的树结构图</p>
+<img src="/2018/08/28/Mac下Hexo-Github搭建博客/1.jpg" title="安装成功">
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>##三、配置hexo<br>在用户名目下创建hexo文件夹，进入文件夹执行以下命令初始化：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
+<p>可能会出现一些warning，先不管他。</p>
+<p>hexo命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate /** 生成一套静态网页 **/</span><br><span class="line">$ hexo server /** 在服务器上运行 **/</span><br></pre></td></tr></table></figure></p>
+<p>在<a href="http://localhost:4000可以看到以下界面：" target="_blank" rel="noopener">http://localhost:4000可以看到以下界面：</a></p>
+<p>##四、git部署<br>安装git部署器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git —save</span><br></pre></td></tr></table></figure>
+<p>这个是说有一个东西版本太低？先跳过。</p>
+<p>创建一个Github仓库fiona-gao.github.io<br>复制链接：<a href="https://github.com/Fiona-Gao/Fiona-Gao.github.io" target="_blank" rel="noopener">https://github.com/Fiona-Gao/Fiona-Gao.github.io</a></p>
+<p>##五、配置集成<br>修改_config.yml文件，进入hexo，修改文件：</p>
+<p>会看到很多属性（参考<a href="https://blog.csdn.net/jasonjwl/article/details/52887575）" target="_blank" rel="noopener">https://blog.csdn.net/jasonjwl/article/details/52887575）</a><br>配置完成后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>部署成功，可以在浏览器中查看结果：</p>
+<p>##六、基础操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> new “我的第一篇博客”</span><br></pre></td></tr></table></figure>
+<p>修改这个md<br>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br><span class="line">$ hero server</span><br></pre></td></tr></table></figure>
+<p>##七、图片插入<br>修改_config.yml配置文件post_asset_folder项为true。<br>这样在hexo new创建新项目的时候会有一个文件夹。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/28/Mac下Hexo-Github搭建博客/" data-id="cjldog07m0001vnt1qtg08o7b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Hexo-Github博客系统搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/27/Hexo-Github博客系统搭建/" class="article-date">
@@ -84,18 +146,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Mac下Hexo+GitHub搭建博客（未完成，图片未插入）<br>一、 环境配置<br>    1.Git<br>    2.Node.js<br>     3.更新node和npm<br>        sudo n stable<br>    4.Github账号<br>二、安装Hero<br>    sudo npm install -g hexo<br>    安装成功会出现一个非常长的树结构图</p>
-<p>npm install<br>在用户名目下创建hexo文件夹，进入文件夹执行以下命令初始化：<br>hexo init可能会出现一些warning，先不管他。<br>hexo命令：<br>hexo generate /<strong> 生成一套静态网页 </strong>/<br>hexo server /<strong> 在服务器上运行 </strong>/<br>在<a href="http://localhost:4000可以看到以下界面：" target="_blank" rel="noopener">http://localhost:4000可以看到以下界面：</a><br>git部署<br>安装git部署器<br>npm install hexo-deployer-git —save</p>
-<p>这个是说有一个东西版本太低？先跳过。<br>创建一个Github仓库fiona-gao.github.io<br>复制链接：<a href="https://github.com/Fiona-Gao/Fiona-Gao.github.io" target="_blank" rel="noopener">https://github.com/Fiona-Gao/Fiona-Gao.github.io</a><br>修改_config.yml文件，进入hexo，修改文件：<br>会看到很多属性（参考<a href="https://blog.csdn.net/jasonjwl/article/details/52887575）" target="_blank" rel="noopener">https://blog.csdn.net/jasonjwl/article/details/52887575）</a><br>配置完成后执行：hexo d<br>部署成功，可以在浏览器中查看结果：</p>
-<p>当新增文章插件时可以执行以下步骤：<br>hexo clean<br>hexo generate<br>hexo deploy</p>
-<p>使用：</p>
-<p>hexo new post “我的第一篇博客”，创建一个post，会创建一个.md<br>修改这个md<br>然后执行<br>hexo generate<br>hexo deploy<br>hero server</p>
-<p>！未完成，暂时没有图片插入，明天继续完成图片部分，啦啦啦。</p>
+        <p>Mac下Hexo+GitHub搭建博客（未完成，图片未插入）</p>
+<p>##一、 环境配置<br>    1.Git<br>    2.Node.js<br>     3.更新node和npm</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo n stable</span><br></pre></td></tr></table></figure>
+
+4.Github账号
+</code></pre><p>##二、安装Hero</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+
+安装成功会出现一个非常长的树结构图
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</code></pre><p>##三、配置hexo<br>    在用户名目下创建hexo文件夹，进入文件夹执行以下命令初始化：<br>        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
+<pre><code>可能会出现一些warning，先不管他。
+
+hexo命令：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate /** 生成一套静态网页 **/</span><br><span class="line">$ hexo server /** 在服务器上运行 **/</span><br></pre></td></tr></table></figure>
+
+在http://localhost:4000可以看到以下界面：
+</code></pre><p>##四、git部署<br>    安装git部署器</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git —save</span><br></pre></td></tr></table></figure>
+
+这个是说有一个东西版本太低？先跳过。
+
+创建一个Github仓库fiona-gao.github.io
+复制链接：https://github.com/Fiona-Gao/Fiona-Gao.github.io
+</code></pre><p>##五、配置集成<br>    修改_config.yml文件，进入hexo，修改文件：</p>
+<pre><code>会看到很多属性（参考https://blog.csdn.net/jasonjwl/article/details/52887575）
+配置完成后执行：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+部署成功，可以在浏览器中查看结果：
+</code></pre><p>##六、基础操作</p>
+<pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> new “我的第一篇博客”</span><br></pre></td></tr></table></figure>
+
+修改这个md
+然后执行：
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">hero server</span><br></pre></td></tr></table></figure>
+</code></pre><p>##七、图片插入<br>    修改_config.yml配置文件post_asset_folder项为true。<br>    这样在hexo new创建新项目的时候会有一个文件夹。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/27/Hexo-Github博客系统搭建/" data-id="cjlc5xkor0000gbt13cx4gkjy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/27/Hexo-Github博客系统搭建/" data-id="cjldog07i0000vnt1rst1dhhr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/27/我的第一篇博客/" data-id="cjlc5xkox0002gbt14sj8qiqd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/27/我的第一篇博客/" data-id="cjldog07p0003vnt1jw51a3d3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/27/hello-world/" data-id="cjlc5xkov0001gbt1ea2ylwip" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/27/hello-world/" data-id="cjldog07o0002vnt1ofdc4hfw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,6 +310,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/08/28/Mac下Hexo-Github搭建博客/">Mac下Hexo+Github搭建博客</a>
+          </li>
         
           <li>
             <a href="/2018/08/27/Hexo-Github博客系统搭建/">Hexo+Github博客系统搭建</a>
