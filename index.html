@@ -95,14 +95,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>##三、配置hexo<br>在用户名目下创建hexo文件夹，进入文件夹执行以下命令初始化：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>可能会出现一些warning，先不管他。</p>
-<p>hexo命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate /** 生成一套静态网页 **/</span><br><span class="line">$ hexo server /** 在服务器上运行 **/</span><br></pre></td></tr></table></figure>
-<p>在<a href="http://localhost:4000可以看到以下界面：" target="_blank" rel="noopener">http://localhost:4000可以看到以下界面：</a><br><img src="/2018/08/28/Mac下Hexo-Github搭建博客/3.jpg" title="本地界面}</p> <p>##四、git部署<br>安装git部署器</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>$ npm install hexo-deployer-git —save</span><br></pre></td></tr></table></figure> <p>{% asset_img 4.jpg warning信息}<br>{% asset_img 5.jpg warning信息}<br>{% asset_img 6.jpg warning信息}<br>这个是说有一个东西版本太低？先跳过。</p> <p>创建一个Github仓库fiona-gao.github.io<br>复制链接：<a href=https://github.com/Fiona-Gao/Fiona-Gao.github.io>https://github.com/Fiona-Gao/Fiona-Gao.github.io</a></p> <p>##五、配置集成<br>修改_config.yml文件，进入hexo，修改文件：</p> <p>{% asset_img 7.jpg 修改配置文件}</p> <p>会看到很多属性（参考<a href=https://blog.csdn.net/jasonjwl/article/details/52887575）>https://blog.csdn.net/jasonjwl/article/details/52887575）</a><br>配置完成后执行：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>$ hexo d</span><br></pre></td></tr></table></figure> <p>部署成功，可以在浏览器中查看结果：<br>{% asset_img 8.jpg github端界面}</p> <p>##六、基础操作</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line><span class=variable>$hexo</span> new “我的第一篇博客”</span><br></pre></td></tr></table></figure> <p>修改这个md<br>然后执行：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br></pre></td><td class=code><pre><span class=line>$ hexo clean</span><br><span class=line>$ hexo generate</span><br><span class=line>$ hexo deploy</span><br><span class=line>$ hexo server</span><br></pre></td></tr></table></figure> <p>##七、图片插入<br>修改_config.yml配置文件post_asset_folder项为true。<br>这样在hexo new创建新项目的时候会有一个文件夹。</p> <p>{% asset_img 9.jpg github端界面}</p> <p>将图片存储在文件夹中并使用以下文字引用：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>&#123;% asset_img 9.jpg github端界面&#125;</span><br></pre></td></tr></table></figure>"></p>
+<p><img src="/2018/08/28/Mac下Hexo-Github搭建博客/2.jpg" title="hexo init}</p> <p>可能会出现一些warning，先不管他。</p> <p>hexo命令：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br></pre></td><td class=code><pre><span class=line>$ hexo generate /** 生成一套静态网页 **/</span><br><span class=line>$ hexo server /** 在服务器上运行 **/</span><br></pre></td></tr></table></figure> <p>在<a href=http://localhost:4000可以看到以下界面：>http://localhost:4000可以看到以下界面：</a><br>{% asset_img 3.jpg 本地界面}</p> <p>##四、git部署<br>安装git部署器</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>$ npm install hexo-deployer-git —save</span><br></pre></td></tr></table></figure> <p>{% asset_img 4.jpg warning信息}<br>{% asset_img 5.jpg warning信息}<br>{% asset_img 6.jpg warning信息}<br>这个是说有一个东西版本太低？先跳过。</p> <p>创建一个Github仓库fiona-gao.github.io<br>复制链接：<a href=https://github.com/Fiona-Gao/Fiona-Gao.github.io>https://github.com/Fiona-Gao/Fiona-Gao.github.io</a></p> <p>##五、配置集成<br>修改_config.yml文件，进入hexo，修改文件：</p> <p>{% asset_img 7.jpg 修改配置文件}</p> <p>会看到很多属性（参考<a href=https://blog.csdn.net/jasonjwl/article/details/52887575）>https://blog.csdn.net/jasonjwl/article/details/52887575）</a><br>配置完成后执行：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>$ hexo d</span><br></pre></td></tr></table></figure> <p>部署成功，可以在浏览器中查看结果：<br>{% asset_img 8.jpg github端界面}</p> <p>##六、基础操作</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line><span class=variable>$hexo</span> new “我的第一篇博客”</span><br></pre></td></tr></table></figure> <p>修改这个md<br>然后执行：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br><span class=line>2</span><br><span class=line>3</span><br><span class=line>4</span><br></pre></td><td class=code><pre><span class=line>$ hexo clean</span><br><span class=line>$ hexo generate</span><br><span class=line>$ hexo deploy</span><br><span class=line>$ hexo server</span><br></pre></td></tr></table></figure> <p>##七、图片插入<br>修改_config.yml配置文件post_asset_folder项为true。<br>这样在hexo new创建新项目的时候会有一个文件夹。</p> <p>{% asset_img 9.jpg github端界面}</p> <p>将图片存储在文件夹中并使用以下文字引用：</p> <figure class=highlight bash><table><tr><td class=gutter><pre><span class=line>1</span><br></pre></td><td class=code><pre><span class=line>&#123;% asset_img 9.jpg github端界面&#125;</span><br></pre></td></tr></table></figure>"></p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/28/Mac下Hexo-Github搭建博客/" data-id="cjldp1bi10001xgt12rfxq81g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/28/Mac下Hexo-Github搭建博客/" data-id="cjldp4v9i0000xut1iqam434f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +136,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/27/我的第一篇博客/" data-id="cjldp1bi50002xgt18oxve9ml" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/27/我的第一篇博客/" data-id="cjldp4v9r0002xut1c1wvyy2t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/27/hello-world/" data-id="cjldp1bht0000xgt16dteao7m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/27/hello-world/" data-id="cjldp4v9o0001xut1wc4ukzv9" class="article-share-link">Share</a>
       
       
     </footer>
